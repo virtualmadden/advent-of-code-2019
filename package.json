@@ -1,0 +1,78 @@
+{
+  "name": "advent-of-code-2019",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virtualmadden/advent-of-code-2019.git"
+  },
+  "author": "Jonathan Madden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/virtualmadden/advent-of-code-2019/issues"
+  },
+  "homepage": "https://github.com/virtualmadden/advent-of-code-2019#readme",
+  "scripts": {
+    "style": "prettier --config package.json --write \"{src,test}/**/*.js\"",
+    "lint": "eslint -c package.json \"{src,test}/**/*.js\"",
+    "check": "npm run style && npm run lint",
+    "test": "npm run check && jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "printWidth": 100
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "plugins": [
+      "jest",
+      "import",
+      "prettier"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "rules": {
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "error"
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module"
+    }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 80
+      }
+    }
+  }
+}
