@@ -1,0 +1,17 @@
+name: Pull Request Workflow
+on: [pull_request]
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Node Setup
+        uses: actions/setup-node@master
+        with:
+          node-version: '13.x'
+      - name: NPM Install
+        run: npm install
+      - name: NPM Test
+        run: npm run test
