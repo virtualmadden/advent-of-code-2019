@@ -4,8 +4,8 @@ on:
     branches:
     - master
 jobs:
-  build_and_test:
-    name: Build and Test
+  test:
+    name: Test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
