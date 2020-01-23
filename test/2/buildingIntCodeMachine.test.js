@@ -38,7 +38,7 @@ describe('calculateFuelRequirements', () => {
   })
 
   test('should return a result based on the sample inputs', () => {
-    const data = file.importFile(path.resolve(__dirname, 'IntCodeInput.txt'))
+    const data = file.importFile(path.resolve(__dirname, 'intCodeInput.txt'))
 
     data[1] = 12
     data[2] = 2
