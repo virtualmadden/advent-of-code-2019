@@ -33,7 +33,7 @@
     "tabWidth": 2,
     "semi": false,
     "singleQuote": true,
-    "printWidth": 100
+    "printWidth": 80
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +41,6 @@
       "prettier"
     ],
     "env": {
-      "es6": true,
       "node": true
     },
     "plugins": [
@@ -61,7 +60,7 @@
       "jest/valid-expect": "error"
     },
     "parserOptions": {
-      "ecmaVersion": 6,
+      "ecmaVersion": 10,
       "sourceType": "module"
     }
   },

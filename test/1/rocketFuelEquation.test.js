@@ -4,7 +4,9 @@
 const path = require('path')
 
 const file = require('../util/readFile.js')
-const { calculateFuelRequirements } = require('../../src/1/rocketFuelEquation.js')
+const {
+  calculateFuelRequirements
+} = require('../../src/1/rocketFuelEquation.js')
 
 describe('calculateFuelRequirements', () => {
   test('should return the correct sample results', () => {
@@ -15,7 +17,9 @@ describe('calculateFuelRequirements', () => {
   })
 
   test('should return a result based on the sample inputs', () => {
-    const data = file.importFile(path.resolve(__dirname, 'moduleFuelRequirements.txt'))
+    const data = file.importFile(
+      path.resolve(__dirname, 'moduleFuelRequirements.txt')
+    )
     expect(calculateFuelRequirements(data)).toBe(3334297)
   })
 })
